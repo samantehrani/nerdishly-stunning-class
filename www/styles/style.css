@@ -189,8 +189,25 @@ a {
 
 nav.social {
     margin: 10px auto 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 nav.social>a:not(:last-child) {
     margin-right: 5px;
+}
+
+nav.social>a {
+    width: 20px;
+    height: 20px;
+    position: relative;
+}
+
+nav.social>a>img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
