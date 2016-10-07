@@ -116,7 +116,7 @@ a {
     content: "";
     position: absolute;
     left: 50%;
-    bottom: -9px;
+    bottom: -8.5px;
     width: 15px;
     height: 15px;
     background-color: #ffffff;
@@ -125,7 +125,6 @@ a {
     transform: rotateZ(45deg);
     border-bottom: 1px solid black;
     border-right: 1px solid black;
-    box-shadow: 1px 1px 0px 0px rgba(34, 36, 38, .2);
 }
 
 .person:hover:after {
