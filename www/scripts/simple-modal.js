@@ -1,3 +1,4 @@
+/* eslint-env es6 */
 class SimpleModal {
     constructor(cas = 'modal') {
         this.contentAttributeSelector = cas;
@@ -20,12 +21,13 @@ class SimpleModal {
                                                         top: 0;
                                                         left: 0;
                                                         width: 100vw;
-                                                        height: 100vh;
+                                                        min-height: 100vh;
                                                         background-color: rgba(0, 0, 0, 0.7);
                                                         z-index:99999;
                                                     }
-                                                    [data-${this.contentAttributeSelector}-content] {
+                                                    [data-${this.contentAttributeSelector}-content].hidden {
                                                         display: none;
+                                                        margin:70px 80px;
                                                     }`));
         document.head.appendChild(style);
         return style.sheet;
@@ -58,9 +60,9 @@ class SimpleModal {
         let content;
         this.buildModal();
         if (options.contentId) {
-            let contentHolderNode = document.querySelector(`[data-${this.contentAttributeSelector}-content=${options.contentId}]`);
-            content = contentHolderNode.innerHTML || 'No Content Found!';
-            this.modalPanel.innerHTML = content;
+            let contentNode = document.querySelector(`[data-${this.contentAttributeSelector}-content=${options.contentId}]`);
+            this.modalPanel.appendChild(contentNode);
+            this.modalPanel.firstChild.classList.remove('hidden');
         } else if (options.contentURL) {
             //load the url
             fetch(options.contentURL).then(function(response) {
@@ -79,6 +81,8 @@ class SimpleModal {
     }
     closeModal() {
         if (this.modalPanel) {
+            this.modalPanel.firstChild.classList.add('hidden');
+            document.body.appendChild(this.modalPanel.firstChild);
             document.body.removeChild(this.modalPanel);
             this.modalPanel = null;
         }
