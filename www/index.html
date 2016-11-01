@@ -25,18 +25,18 @@
             <fieldset>
                 <div class="form-group form-inline">
                     <label for="email">Email</label>
-                    <input type="email" class="form-control" name="email" placeholder="johndoe@gmail.com">
+                    <input type="email" class="form-control" name="email" placeholder="johndoe@gmail.com" required>
                 </div>
                 <div class="form-group form-inline">
                     <label for="profile-picture">Profile Picture</label><br>
                     <img src="img/profile_thumb.png" height="200" style="margin-bottom:7px;" alt="Profile Picture">
-                    <input type="file" accept=".jpg,.jpeg,.png" class="form-control-file" name="profile-picture" id="profile-picture" aria-describedby="picture-help">
+                    <input type="file" accept=".jpg,.jpeg,.png" class="form-control-file" name="profile-picture" id="profile-picture" aria-describedby="picture-help" required>
                     <small id="picture-help" class="form-text text-muted">Only .jpg/.png files accepted! Picture size must be less than 1Mb!</small>
                 </div>
                 <div class="form-group form-inline">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="first_name" placeholder="John" />
-                    <input type="text" class="form-control" name="last_name" placeholder="Doe" />
+                    <input type="text" class="form-control" name="first_name" placeholder="John" required>
+                    <input type="text" class="form-control" name="last_name" placeholder="Doe" required>
                 </div>
                 <div class="form-group">
                     <label for="excerpt">Tagline</label>
@@ -44,7 +44,7 @@
                 </div>
                 <div class="form-group">
                     <label for="full_bio">Bio</label>
-                    <textarea rows="4" style="max-width:100%;" name="full_bio" class="form-control" placeholder="I am ...."></textarea>
+                    <textarea rows="4" style="max-width:100%;" name="full_bio" class="form-control" placeholder="I am ...." required></textarea>
                 </div>
                 <div class="form-group">
 
