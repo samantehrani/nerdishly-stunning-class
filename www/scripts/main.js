@@ -128,7 +128,7 @@
                 form.removeChild(form.querySelector('.alert'));
 
             var formData = new FormData(form);
-
+            
             let config = {
                 method: 'POST',
                 headers: new Headers({}),

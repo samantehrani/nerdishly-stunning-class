@@ -14,7 +14,7 @@ class SimpleModal {
     addStyleSheet() {
         var style = document.createElement("style");
         style.appendChild(document.createTextNode(`#${this.contentAttributeSelector}-layer {
-                                                        position: fixed;
+                                                        position: absolute;
                                                         display: flex;
                                                         justify-content: center;
                                                         align-items: center;
